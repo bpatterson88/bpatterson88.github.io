@@ -1,1 +1,46 @@
-Hello World
+<!doctype html>
+<html>    
+    <head>
+        <title>Ben Patterson</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- <link href="scripts.js"> -->
+
+    </head>
+    <body class="body">
+        <section class="content">
+            <h1>Ben Patterson</h1>
+            <h2>UI Designer at <a href="https://www.esri.com" target=0>Esri</a></h2>
+            <ul>
+                <li>LinkedIn</li>
+                <li>GitHub</li>
+                <li>Email</li>
+            </ul>
+            <div id="spotlight-container">
+                <div class="spotlight"></div>
+            </div>            
+        </section>
+        <section class="coordinates">
+            <span id="x">0000000</span>
+            <span id="y">0000000</span>
+        </section>
+    </body>
+
+    <script>
+        var body = document.querySelector(".body");
+        var pageX = document.getElementById("x");
+        var pageY = document.getElementById("y");
+        var spotlight = document.getElementById("spotlight-container");
+
+        function updateDisplay(event) {
+            pageX.innerText = event.pageX;
+            pageY.innerText = event.pageY;  
+            spotlight.setAttribute('style', "top:" + event.pageY + "px;left:" + event.pageX + "px;");
+
+        }
+
+        console.log('' + body + '');
+        body.addEventListener("mousemove", updateDisplay, false);
+        body.addEventListener("mouseenter", updateDisplay, false);
+        body.addEventListener("mouseleave", updateDisplay, false);
+    </script>    
+</html>
