@@ -20,9 +20,11 @@
             </div>            
         </section>
         <section class="coordinates">
-            <span id="x">0000000</span>
-            <span id="y">0000000</span>
+            <span id="x">000</span>
+            <span id="y">000</span>
+            <div id="timer">00:00:00</div>
         </section>
+        
     </body>
 
     <script>
@@ -42,5 +44,21 @@
         body.addEventListener("mousemove", updateDisplay, false);
         body.addEventListener("mouseenter", updateDisplay, false);
         body.addEventListener("mouseleave", updateDisplay, false);
+
+        var timerVar = setInterval(countTimer, 1000);
+var totalSeconds = 0;
+function countTimer() {
+           ++totalSeconds;
+           var hour = Math.floor(totalSeconds /3600);
+           var minute = Math.floor((totalSeconds - hour*3600)/60);
+           var seconds = totalSeconds - (hour*3600 + minute*60);
+           if(hour < 10)
+             hour = "0"+hour;
+           if(minute < 10)
+             minute = "0"+minute;
+           if(seconds < 10)
+             seconds = "0"+seconds;
+           document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+        }        
     </script>    
 </html>
