@@ -1,3 +1,3 @@
-# bpatterson88.github.io
+# benpatterson.design
 My personal website
 
