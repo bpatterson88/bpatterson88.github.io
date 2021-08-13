@@ -31,6 +31,11 @@ ul {
 .coordinates {
     transform:scaleY(.2);
     font-size:4rem;
-    bottom: -3.5rem;
+    bottom: -4rem;
     position: absolute;    
+}
+
+.content {
+    position: absolute;
+    top: -1.25rem;
 }
