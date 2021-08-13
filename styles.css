@@ -34,8 +34,3 @@ ul {
     bottom: -3.5rem;
     position: absolute;    
 }
-
-.name {
-    transform:scaleY(.2);
-    font-size:8rem;
-}
